@@ -38,7 +38,6 @@
           let losses = 0;
           let ties = 0;
 
-
           rock.addEventListener('click', () => {
                let computerMove = (Math.random() * 8).toFixed();
                
@@ -58,10 +57,10 @@
                }
                resultScores.innerHTML = 
                                    `
-                                        Wins: ${wins}
-                                        Ties: ${ties}
-                                        Losses: ${losses}
-                                        Total Times Played: ${wins + ties + losses}
+                                       <span style=" color: green;">Wins: ${wins} </span> </br>
+                                        <span style=" color: yellow; font-weight: 900">Ties: ${ties} </span> </br>
+                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
+                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
                                    `
           })
           
@@ -84,10 +83,10 @@
                }
                resultScores.innerHTML = 
                                    `
-                                        Wins: ${wins}
-                                        Ties: ${ties}
-                                        Losses: ${losses}
-                                        Total Times Played: ${wins + ties + losses}
+                                       <span style=" color: green;">Wins: ${wins} </span> </br>
+                                        <span style=" color: yellow; font-weight: 900">Ties: ${ties} </span> </br>
+                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
+                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
                                    `
                
           })
@@ -112,10 +111,10 @@
                }
                resultScores.innerHTML = 
                                    `
-                                        Wins: ${wins}
-                                        Ties: ${ties}
-                                        Losses: ${losses}
-                                        Total Times Played: ${wins + ties + losses}
+                                        <span style=" color: green;">Wins: ${wins} </span> </br>
+                                        <span style=" color: yellow; font-weight: 900">Ties: ${ties} </span> </br>
+                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
+                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
                                    `
           })
 
