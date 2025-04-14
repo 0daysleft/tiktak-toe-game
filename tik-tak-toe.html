@@ -22,12 +22,45 @@
                <button class="scissors">Scissors ✂️</button>
           </div>
 
-          <div class="results">
-
+          <div class="result">
+               <p class="results"></p>
           </div>
      </section>
      
      <script>
+          let rock = document.getElementsByClassName('rock')[0];
+          let paper = document.getElementsByClassName('paper')[0];
+          let scissors = document.getElementsByClassName('scissors')[0];
+          let resultsDiv = document.getElementsByClassName("results")[0];
+
+          
+          rock.addEventListener('click', () => {
+               let computerMove = (Math.random() * 8).toFixed();
+               
+          })
+          
+          paper.addEventListener('click', () => {
+               let computerMove = (Math.random() * 8).toFixed();
+
+               if(computerMove >= 0 && computerMove <= 2)
+                    {
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Lost 😂";
+                    }
+                    else if(computerMove >= 3 && computerMove <= 5)
+                    {
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😊";
+                    }
+                    else if(computerMove >= 6 && computerMove <= 10){
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
+               }
+               
+          })
+          
+          scissors.addEventListener('click', () => {
+               let computerMove = (Math.random() * 8).toFixed();
+               
+               
+          })
 
      </script>
 </body>
