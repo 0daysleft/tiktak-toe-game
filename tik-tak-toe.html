@@ -56,6 +56,12 @@
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Scissors ✌️: You Lost ☠️";
                          losses++;
                }
+               resultScores.innerHTML = 
+                                   `
+                                        Wins: ${wins}
+                                        Ties: ${ties}
+                                        Losses: ${losses}
+                                   `
           })
           
           paper.addEventListener('click', () => {
@@ -75,6 +81,12 @@
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
                          losses++;
                }
+               resultScores.innerHTML = 
+                                   `
+                                        Wins: ${wins}
+                                        Ties: ${ties}
+                                        Losses: ${losses}
+                                   `
                
           })
           
@@ -94,16 +106,18 @@
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked  Scissors ✌️ and Computer Picked Scissors ✌️: TIE 😒";
                          ties++;
+                         
                }
-          })
-
-                   
-          resultScores.innerHTML = 
+               resultScores.innerHTML = 
                                    `
                                         Wins: ${wins}
                                         Ties: ${ties}
                                         Losses: ${losses}
                                    `
+          })
+
+                   
+          
 
      </script>
 </body>
