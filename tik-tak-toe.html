@@ -24,6 +24,7 @@
 
           <div class="result">
                <p class="results"></p>
+               <p class="result-scores"></p>
           </div>
      </section>
      
@@ -32,11 +33,19 @@
           let paper = document.getElementsByClassName('paper')[0];
           let scissors = document.getElementsByClassName('scissors')[0];
           let resultsDiv = document.getElementsByClassName("results")[0];
-          let result = {
-               wins: 0,
-               losses: 0,
-               ties: 0
-          }
+          let wins = 0;
+          let losses = 0;
+          let ties = 0;
+
+          let resultScores = document.getElementsByClassName("result-scores")[0];
+          resultScores.innerHTML = 
+                                   `
+                                        Wins: ${wins}
+                                        Ties: ${ties}
+                                        Losses: ${losses}
+                                   `
+
+
 
           
           rock.addEventListener('click', () => {
@@ -45,16 +54,16 @@
                if(computerMove >= 0 && computerMove <= 2)
                     {
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Rock ✊: You TIE 😒";
-                         result.ties++;
+                         ties++;
                     }
                     else if(computerMove >= 3 && computerMove <= 5)
                     {
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Paper 🖐️: You Won 🥳";
-                         result.wins++;
+                         wins++;
                     }
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Scissors ✌️: You Lost ☠️";
-                         result.losses++;
+                         losses++;
                }
           })
           
@@ -64,16 +73,16 @@
                if(computerMove >= 0 && computerMove <= 2)
                     {
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Won 🥳";
-                         result.wins++;
+                         wins++;
                     }
                     else if(computerMove >= 3 && computerMove <= 5)
                     {
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😒";
-                         result.ties++;
+                         ties++;
                     }
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
-                         result.losses++;
+                         losses++;
                }
                
           })
@@ -84,16 +93,16 @@
                if(computerMove >= 0 && computerMove <= 2)
                     {
                          resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Rock ✊: You Lost 😂";
-                         result.losses++;
+                         losses++;
                     }
                     else if(computerMove >= 3 && computerMove <= 5)
                     {
                          resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Paper 🖐️: You Won 🥳";
-                         result.wins++;
+                         wins++;
                     }
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked  Scissors ✌️ and Computer Picked Scissors ✌️: TIE 😒";
-                         result.ties++;
+                         ties++;
                }
           })
 
