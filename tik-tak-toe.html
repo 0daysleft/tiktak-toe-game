@@ -33,9 +33,9 @@
           let scissors = document.getElementsByClassName('scissors')[0];
           let resultsDiv = document.getElementsByClassName("results")[0];
           let result = {
-               wins,
-               losses,
-               ties
+               wins: 0,
+               losses: 0,
+               ties: 0
           }
 
           
@@ -45,13 +45,16 @@
                if(computerMove >= 0 && computerMove <= 2)
                     {
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Rock ✊: You TIE 😒";
+                         result.ties++;
                     }
                     else if(computerMove >= 3 && computerMove <= 5)
                     {
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Paper 🖐️: You Won 🥳";
+                         result.wins++;
                     }
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Scissors ✌️: You Lost ☠️";
+                         result.losses++;
                }
           })
           
@@ -60,14 +63,17 @@
 
                if(computerMove >= 0 && computerMove <= 2)
                     {
-                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Lost 😂";
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Won 🥳";
+                         result.wins++;
                     }
                     else if(computerMove >= 3 && computerMove <= 5)
                     {
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😒";
+                         result.ties++;
                     }
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
+                         result.losses++;
                }
                
           })
@@ -78,13 +84,16 @@
                if(computerMove >= 0 && computerMove <= 2)
                     {
                          resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Rock ✊: You Lost 😂";
+                         result.losses++;
                     }
                     else if(computerMove >= 3 && computerMove <= 5)
                     {
                          resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Paper 🖐️: You Won 🥳";
+                         result.wins++;
                     }
                     else if(computerMove >= 6 && computerMove <= 10){
                          resultsDiv.innerHTML = "You picked  Scissors ✌️ and Computer Picked Scissors ✌️: TIE 😒";
+                         result.ties++;
                }
           })
 
