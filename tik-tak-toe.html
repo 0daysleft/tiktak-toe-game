@@ -37,6 +37,17 @@
           rock.addEventListener('click', () => {
                let computerMove = (Math.random() * 8).toFixed();
                
+               if(computerMove >= 0 && computerMove <= 2)
+                    {
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Lost 😂";
+                    }
+                    else if(computerMove >= 3 && computerMove <= 5)
+                    {
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😊";
+                    }
+                    else if(computerMove >= 6 && computerMove <= 10){
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
+               }
           })
           
           paper.addEventListener('click', () => {
@@ -59,7 +70,17 @@
           scissors.addEventListener('click', () => {
                let computerMove = (Math.random() * 8).toFixed();
                
-               
+               if(computerMove >= 0 && computerMove <= 2)
+                    {
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Lost 😂";
+                    }
+                    else if(computerMove >= 3 && computerMove <= 5)
+                    {
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😊";
+                    }
+                    else if(computerMove >= 6 && computerMove <= 10){
+                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
+               }
           })
 
      </script>
