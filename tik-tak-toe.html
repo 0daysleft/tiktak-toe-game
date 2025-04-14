@@ -38,6 +38,16 @@
           let losses = 0;
           let ties = 0;
 
+          function displayResults() {
+               resultScores.innerHTML = 
+                                   `
+                                       <span style=" color: green; font-weight: 900">Wins: ${wins} </span> </br>
+                                        <span style=" color: magenta; font-weight: 900">Ties: ${ties} </span> </br>
+                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
+                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
+                                   `
+          }
+
           rock.addEventListener('click', () => {
                let computerMove = (Math.random() * 8).toFixed();
                
@@ -55,13 +65,7 @@
                          resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Scissors ✌️: You Lost ☠️";
                          losses++;
                }
-               resultScores.innerHTML = 
-                                   `
-                                       <span style=" color: green; font-weight: 900">Wins: ${wins} </span> </br>
-                                        <span style=" color: magenta; font-weight: 900">Ties: ${ties} </span> </br>
-                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
-                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
-                                   `
+               displayResults();
           })
           
           paper.addEventListener('click', () => {
@@ -81,13 +85,8 @@
                          resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
                          losses++;
                }
-               resultScores.innerHTML = 
-                                   `
-                                       <span style=" color: green; font-weight: 900">Wins: ${wins} </span> </br>
-                                        <span style=" color: magenta; font-weight: 900">Ties: ${ties} </span> </br>
-                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
-                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
-                                   `
+               
+               displayResults();
                
           })
           
@@ -109,13 +108,8 @@
                          ties++;
                          
                }
-               resultScores.innerHTML = 
-                                   `
-                                        <span style=" color: green;">Wins: ${wins} </span> </br>
-                                        <span style=" color: magenta; font-weight: 900">Ties: ${ties} </span> </br>
-                                        <span style=" color: red; font-weight: 900">Losses: ${losses} </span> </br>
-                                        <span style=" color: blue; font-weight: 900">Total Times Played: ${wins + ties + losses} </span>
-                                   `
+               
+               displayResults();
           })
 
                    
