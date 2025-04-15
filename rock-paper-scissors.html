@@ -56,6 +56,13 @@
                                    `
           }
 
+          function computerMove(){
+               let options = ['Paper 🖐️', 'Scissors ✌️', 'Rock ✊']
+               let selectOption = Math.floor(Math.random() * options.length)
+
+               return options[selectOption];
+          }
+
           rock.addEventListener('click', () => {
                let computerMove = (Math.random() * 8).toFixed();
                
