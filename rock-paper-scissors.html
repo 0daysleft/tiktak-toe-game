@@ -64,65 +64,64 @@
           }
 
           rock.addEventListener('click', () => {
-               let computerMove = (Math.random() * 8).toFixed();
+              
                
-               if(computerMove >= 0 && computerMove <= 2)
-                    {
-                         resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Rock ✊: You TIE 😒";
-                         ties++;
-                    }
-                    else if(computerMove >= 3 && computerMove <= 5)
-                    {
-                         resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Paper 🖐️: You Won 🥳";
-                         wins++;
-                    }
-                    else if(computerMove >= 6 && computerMove <= 8){
-                         resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Scissors ✌️: You Lost ☠️";
-                         losses++;
-               }
+               // if(computerMove >= 0 && computerMove <= 2)
+               //      {
+               //           resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Rock ✊: You TIE 😒";
+               //           ties++;
+               //      }
+               //      else if(computerMove >= 3 && computerMove <= 5)
+               //      {
+               //           resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Paper 🖐️: You Won 🥳";
+               //           wins++;
+               //      }
+               //      else if(computerMove >= 6 && computerMove <= 8){
+               //           resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Scissors ✌️: You Lost ☠️";
+               //           losses++;
+               // }
                displayResults();
           })
           
           paper.addEventListener('click', () => {
-               let computerMove = (Math.random() * 8).toFixed();
+              
 
-               if(computerMove >= 0 && computerMove <= 2)
-                    {
-                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Won 🥳";
-                         wins++;
-                    }
-                    else if(computerMove >= 3 && computerMove <= 5)
-                    {
-                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😒";
-                         ties++;
-                    }
-                    else if(computerMove >= 6 && computerMove <= 8){
-                         resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
-                         losses++;
-               }
+               // if(computerMove >= 0 && computerMove <= 2)
+               //      {
+               //           resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Won 🥳";
+               //           wins++;
+               //      }
+               //      else if(computerMove >= 3 && computerMove <= 5)
+               //      {
+               //           resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Paper 🖐️: TIE 😒";
+               //           ties++;
+               //      }
+               //      else if(computerMove >= 6 && computerMove <= 8){
+               //           resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Scissors ✌️: You Lost 😂";
+               //           losses++;
+               // }
                
                displayResults();
                
           })
           
           scissors.addEventListener('click', () => {
-               let computerMove = (Math.random() * 8).toFixed();
                
-               if(computerMove >= 0 && computerMove <= 2)
-                    {
-                         resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Rock ✊: You Lost 😂";
-                         losses++;
-                    }
-                    else if(computerMove >= 3 && computerMove <= 5)
-                    {
-                         resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Paper 🖐️: You Won 🥳";
-                         wins++;
-                    }
-                    else if(computerMove >= 6 && computerMove <= 8){
-                         resultsDiv.innerHTML = "You picked  Scissors ✌️ and Computer Picked Scissors ✌️: TIE 😒";
-                         ties++;
+               // if(computerMove >= 0 && computerMove <= 2)
+               //      {
+               //           resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Rock ✊: You Lost 😂";
+               //           losses++;
+               //      }
+               //      else if(computerMove >= 3 && computerMove <= 5)
+               //      {
+               //           resultsDiv.innerHTML = "You picked Scissors ✌️ and Computer Picked Paper 🖐️: You Won 🥳";
+               //           wins++;
+               //      }
+               //      else if(computerMove >= 6 && computerMove <= 8){
+               //           resultsDiv.innerHTML = "You picked  Scissors ✌️ and Computer Picked Scissors ✌️: TIE 😒";
+               //           ties++;
                          
-               }
+               // }
                
                displayResults();
           })
