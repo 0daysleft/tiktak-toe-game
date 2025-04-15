@@ -65,7 +65,16 @@
 
           rock.addEventListener('click', () => {
               
-               
+               resultsDiv.innerHTML = ` You Choosed Rock ✊ and Computer Choosed ${computerMove()}`;
+               if(computerMove() === 'Paper 🖐️'){
+                    losses++;
+               }
+               else if(computerMove() === 'Scissors ✌️'){
+                    wins++;
+               }
+               else{
+                    ties++;
+               }
                // if(computerMove >= 0 && computerMove <= 2)
                //      {
                //           resultsDiv.innerHTML = "You picked Rock ✊ and Computer Picked Rock ✊: You TIE 😒";
