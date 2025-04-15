@@ -95,6 +95,16 @@
           paper.addEventListener('click', () => {
               
 
+               resultsDiv.innerHTML = ` You Choosed Paper 🖐️ and Computer Choosed ${computerMove()}`;
+                    if(computerMove() === 'Paper 🖐️'){
+                         ties++;
+                    }
+                    else if(computerMove() === 'Scissors ✌️'){
+                         losses++;
+                    }
+                    else{
+                         wins++;
+                    }
                // if(computerMove >= 0 && computerMove <= 2)
                //      {
                //           resultsDiv.innerHTML = "You picked Paper 🖐️ and Computer Picked Rock ✊: You Won 🥳";
@@ -115,6 +125,17 @@
           })
           
           scissors.addEventListener('click', () => {
+
+               resultsDiv.innerHTML = ` You Choosed Scissors ✌️ and Computer Choosed ${computerMove()}`;
+                    if(computerMove() === 'Paper 🖐️'){
+                         wins++;
+                    }
+                    else if(computerMove() === 'Scissors ✌️'){
+                         ties++;
+                    }
+                    else{
+                         losses++;
+                    }
                
                // if(computerMove >= 0 && computerMove <= 2)
                //      {
